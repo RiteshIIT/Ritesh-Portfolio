@@ -1,4 +1,4 @@
-Download the ZIP file and extract it first.
+
 
 Name : Ritesh Kumar Ahirwar
 Roll no : 23B0314
