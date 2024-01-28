@@ -18,4 +18,6 @@ The hobby section have different containers and it have a photo and a short desc
 
 Connect with me section have my contact information and also my social media handles. which can be referred by clicking on the different icons. the icons will have an effect on hovering on them. Also, this section has a contact form, which is connected to "web3forms" website and on submitting the form will send the email directly to me.
 
+The website is responsive and in the screen size of a phone, the navbar will get inside a side menu button and on pressing it, you will get the all options of navbar.
+
 Conclusion : I have worked a lot in little time to build this website and tried my best to make it attractive and creative. Also, the website is fully responsive and can be accessed in different screen sizes without losing or overlapping any important data.
