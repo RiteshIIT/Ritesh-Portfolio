@@ -1,0 +1,488 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing:border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: black;
+    color: white;
+    
+
+}
+
+header{
+    height:100vh;
+    width:100%;
+    padding-top: 20px;
+    background-image: url(media/background.png);
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+.container{
+     padding: 10px 10%; /*padding of 10px from top and bottom, 10% from left and right */
+    
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: color 0.3s, font-size 0.3s; /* Add transition for color and font-size */
+}
+
+nav a:hover {
+    color: #720455;
+    font-size: 2.5em;
+
+}
+
+.header-text{
+    margin-top:20%;
+    font-size:30px;
+
+}
+
+.header-text p{
+    color: #720455;
+}
+
+.header-text span{
+    color:#720455
+}
+
+
+
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.header-text p {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.15em;
+    position: relative;
+}
+
+.header-text p::after {
+    content: '|';
+    display: inline-block;
+    vertical-align: text-bottom;
+    opacity: 0;
+    animation:blink-caret 0.75s step-end infinite;
+}
+
+/* --------------------------heading buttons-------------------- */
+
+.heading-block {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background-color: #d1d0d1;
+    color: #000000;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-block:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    color:#fff;
+}
+
+.background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #585856, #301429);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+/* ------------------------introduction----------------------------------------- */
+
+
+#introduction{
+    padding: 80px 0;
+    color: #ababab;
+
+}
+
+.right-block {
+    position: relative;
+    display: flex;
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.right-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.right-block img {
+    width: 150px; 
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.left-block {
+    position: relative;
+    display: flex;
+    width: 70%;
+    margin-top: 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.left-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.left-block img {
+    width: 150px; 
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    color: rgb(114, 66, 66);
+}
+
+p {
+    margin: 0;
+    color: #666;
+}
+
+/* ----skills----- */
+
+
+.skill-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.skill-name{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
+    background: linear-gradient(45deg, #3498db, #2ecc71, #e74c3c);
+    color: transparent;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.skill-logo{
+    background-color: white;
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+    margin-top: 5vh;
+    
+    
+}
+
+.skill-front{
+    height: 50px;
+    width:50px;
+
+}
+
+
+.skill-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(0%); /* Make the image black and white by default */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+}
+
+.skill-logo:hover img {
+    filter: grayscale(100%); /* Turn the image to color on hover */
+    transform: scale(1.2); 
+}
+
+/* ------------------------------hobbies--------------------------------------------------------- */
+
+#hobbies a{
+    text-decoration: none;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+section h1{
+    color: #3498db; 
+    }
+
+section h2 {
+    color: #3498db;
+  }
+
+.hobby-image {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+.hobby-image img {
+    width: 30%; 
+    height:300px;
+    border-radius: 8px; 
+  }
+
+
+/* ---------------------------------contact me------------------------------------------------ */
+
+
+#contact{
+    margin-top:10vh;
+}
+
+#contact .heading-block{
+    margin-top: 2vh;
+}
+
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top:30px;
+}
+
+.contact-left p i{
+    color:#e10031;
+    margin-right:15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display:inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color:#e10031;
+    transform: translateY(-5px);
+}
+
+
+
+.btn{
+    height:50px;
+    width:150px;
+    border-radius: 10px;
+    font-size: 20px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    display:inline-block;
+    background-color: #e10031;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.btn:hover{
+    background-color: #3f3bc5;
+    color:black;
+}
+
+.contact-right form{
+    width:100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border:0;
+    outline:none;
+    background:#262626;
+    padding:15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* -------------------footer----------------- */
+
+footer{
+    width:100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight:300;
+    margin-top:20px;
+
+}
+
+footer i{
+    color:#d10344;
+}
+
+/* ----------------------------css for small screen-----------0 */
+
+nav .fas{
+    display:none;
+}
+
+@media only screen and (max-width : 600px){
+    header{
+        background-image: url(media/phone-bg.png);
+    }
+
+    nav .fas{
+        display:block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #6d2f43;
+        position: fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top:50px;
+        z-index:2;
+        transition: 0.5s;
+    }
+
+    nav ul li{
+        display:block;
+        margin:25px;
+    }
+
+    nav ul .fas{
+        position:absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+    }
+
+    nav a{
+        font-size: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis:100%;
+    }
+
+    .right-block,.left-block{
+        width: 100%;
+        height:300px;
+        margin-left: 0;
+
+    }
+
+    .content p{
+        font-size: 13px;
+    }
+}
+
+/* --------------------------css for tab--------------------------- */
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){
+    header{
+        background-image: url(media/bg-tab.png);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
